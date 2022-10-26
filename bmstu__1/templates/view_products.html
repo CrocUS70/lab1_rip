@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ company.company }}{% endblock %}
+{% block header %}Списки продукции{% endblock %}
+{% block content %}
+
+    <h3>{{ company.company }}: {{ company.product }}</h3>
+    <li>{{ product.name_product }}</li>
+
+
+    <ul>Карта сайта:
+        <a href="{% url 'products' %}">Список оборонзаказ</a>
+    </ul>
+
+{% endblock %}

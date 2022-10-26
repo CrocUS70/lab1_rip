@@ -1,0 +1,9 @@
+html {
+    background-color: #c08955;
+    display: flex;
+    justify-content: center;
+}
+body {
+    padding: 16px;
+    background-color: #60c260;
+}

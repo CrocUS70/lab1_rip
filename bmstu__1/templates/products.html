@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}ГосОборонЗаказ{% endblock %}
+
+{% block header %}ГосОборонЗаказ{% endblock %}
+
+{% block content %}
+{% if products %}
+
+<table>
+    <thead>
+        <tr>
+            <th>Промышленности</th>
+            <th>Продукция</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for company in products %}
+            <tr>
+                <td>{{ company.company }}</td>
+                <td>{{ company.product }}</td>
+                <td><a href="{% url 'view_products' company.id %}">Просмотр списка продукции</a></td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+    <i>Список пуст</i>
+{% endif %}
+{% endblock %}
